@@ -38,6 +38,6 @@ while (access == 1):
 	reply = 'HI'
 
 	s.sendto(reply, addr)
-	print 'message[' + addr[0] + ':' + str(addr[1]) + '] - ' + data.strip()
+	print 'Message from[' + addr[0] + ':' + str(addr[1]) + '] - ' + data.strip()
 
 s.close
