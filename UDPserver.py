@@ -4,6 +4,7 @@ import sys
 host = ''
 port = 8888
 
+#create socket
 try:
 	s = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 	print "Socket Created"
@@ -11,6 +12,7 @@ except socket.error:
 	print "Failed to create socket"
 	sys.exit(1)
 
+#bind to socket
 try:
 	s.bind((host,port))
 except socket.error:
@@ -19,11 +21,13 @@ except socket.error:
 
 print "Socket Binding Complete!"
 
+#authentication system
 access = ''
 Pass = raw_input("Enter your password: ")
 if (Pass == 'olic'):
 	access = 1
-	
+
+#receive and reply
 while (access == 1):
 	print 'Waiting for response'
 	d = s.recvfrom(1024)
