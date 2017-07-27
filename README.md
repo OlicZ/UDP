@@ -2,6 +2,7 @@
 A simple UDP server and a client
 
 Open up a cmd or terminal.
+
 Run the server using command "python UDPserver.py"
 Enter a password that is "olic"
 
