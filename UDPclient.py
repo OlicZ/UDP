@@ -1,6 +1,7 @@
 import socket
 import sys
 
+#create UDP socket
 try:
 	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 except socket.error:
@@ -12,8 +13,11 @@ print "connection complete!"
 host = '127.0.0.1'
 port = 8888
 
+#initial message
 message = ''
 message = raw_input("Enter your message: ")
+
+#send the message and receive replies from the server
 access = 1
 while (access == 1):
 	s.sendto(message, (host,port))
