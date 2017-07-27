@@ -35,7 +35,7 @@ while (access == 1):
 
 	if not data:
 		break
-	reply = 'OK...'
+	reply = 'HI'
 
 	s.sendto(reply, addr)
 	print 'message[' + addr[0] + ':' + str(addr[1]) + '] - ' + data.strip()
